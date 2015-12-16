@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/bottom_bar_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout style="@style/BottomBar">
+
+            <ImageButton
+                android:id="@+id/bottom_news"
+                style="@style/BottomBarImgBtn"
+                android:background="@drawable/bar_news"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/BottomBar">
+
+            <ImageButton
+                android:id="@+id/bottom_constact"
+                style="@style/BottomBarImgBtn"
+                android:background="@drawable/bar_constact"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/BottomBar">
+
+            <ImageButton
+                android:id="@+id/bottom_deynaimic"
+                style="@style/BottomBarImgBtn"
+                android:background="@drawable/bar_deynaimic"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/BottomBar">
+
+            <ImageButton
+                android:id="@+id/bottom_setting"
+                style="@style/BottomBarImgBtn"
+                android:background="@drawable/bar_setting"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/bottom_bar_group"
+        android:background="@color/devide_line" />
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line">
+
+
+        <RelativeLayout
+            android:id="@+id/first_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="(X5内核功能演示)"
+                android:textColor="@android:color/black"
+                android:textIsSelectable="false"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/item_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/first_Text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:background="#ebebeb"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="1dp"
+            android:numColumns="3"
+            android:paddingTop="1dp"
+            android:verticalSpacing="1dp" />
+
+    </FrameLayout>
+</RelativeLayout>
